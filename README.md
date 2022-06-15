@@ -1,6 +1,6 @@
-# firebase_riverpod
+# Firebase Login with userState Mgmt
 
-Simple and easy to use Firebase Login with State Management
+Simple and easy to use Firebase Login with Riverpod State Management for detecting the current user State
 - Login via email/pw; screens for e.g. buying products
 - Different screens for admin (eg. upload products)
 

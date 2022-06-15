@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527764595355",
+    "project_id": "firelogin-river",
+    "storage_bucket": "firelogin-river.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527764595355:android:9903efd28dac8f61639c3e",
+        "android_client_info": {
+          "package_name": "com.example.firebase_riverpod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527764595355-n0ieqenq14oa1rhb7qpjquvsmaklvf9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0SENfPm4auFFq0PvMdVaH0wkSEzCLwf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527764595355-n0ieqenq14oa1rhb7qpjquvsmaklvf9c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
