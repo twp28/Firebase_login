@@ -3,11 +3,12 @@
 Simple and easy to use Firebase Login with Riverpod State Management for detecting the current user State
 - Login via email/pw; screens for e.g. buying products
 - Different screens for admin (eg. upload products)
+- 3 options for Sign In Screens (FlutterfireUI / FlutterfireUI Custom / Own UI)
 
 ## Getting Started
 
 - Clone Repository
-- run >flutterfire configure
+- run >flutterfire configure to connect to your firebase project
 
 
 ## Fresh Setup - no packages:

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_riverpod/app/auth_widget.dart';
+import 'package:firebase_riverpod/app/pages/admin_home.dart';
 import 'package:firebase_riverpod/app/pages/auth/flutterfire/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,15 +27,16 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       title: 'Flutter Login',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.blueGrey, primary: Colors.blue)),
       home: AuthWidget(
+        adminSignedInBuilder: (context) => AdminHome(),
         signedInBuilder: (context) => Scaffold(
           body: Center(
               child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text("Signed In in"),
+              const Text("Signed In "),
               ElevatedButton(
                   onPressed: () {
                     ref.read(firebaseAuthProvider).signOut();
