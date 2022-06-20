@@ -40,6 +40,7 @@ dependencies:
   firebase_storage: ^10.2.10 #for storage
   flutterfire_ui: ^0.4.0 # for pre-built uis (not used)
   flutter_riverpod: ^1.0.3 # enhanced provider state management
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:

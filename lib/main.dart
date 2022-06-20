@@ -1,7 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_riverpod/app/auth_widget.dart';
+import 'package:firebase_riverpod/app/pages/auth/flutterfire/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_riverpod/app/pages/auth/customown/auth_screen.dart';
 
+import 'app/providers.dart';
 import 'firebase_options.dart';
 
 //initalizeApp(): Initialize Firebase Project in the app
@@ -13,6 +17,40 @@ void main() async {
   runApp(ProviderScope(child: MyApp()));
 }
 
+class MyApp extends ConsumerWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return MaterialApp(
+      title: 'Flutter Login',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: AuthWidget(
+        signedInBuilder: (context) => Scaffold(
+          body: Center(
+              child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text("Signed In in"),
+              ElevatedButton(
+                  onPressed: () {
+                    ref.read(firebaseAuthProvider).signOut();
+                  },
+                  child: const Text("Sign out"))
+            ],
+          )),
+        ),
+        nonSignedInBuilder: (context) => const AuthScreen(),
+      ),
+    );
+  }
+}
+
+
+/*
 // -> RIVERPOD COUNTER BOILERPLATE
 final counterProvider = StateNotifierProvider((ref) {
   return Counter();
@@ -51,6 +89,7 @@ class MyApp extends ConsumerWidget {
   }
 }
 
+*/
 
 
 

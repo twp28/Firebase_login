@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:flutterfire_ui/auth.dart';
+
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SignInScreen(
+      providerConfigs: const [
+        EmailProviderConfiguration(),
+      ],
+    );
+  }
+}
+
+//-> USE IN main.dart --> nonSignedInBuilder: (_) => const SignInScreen(),
